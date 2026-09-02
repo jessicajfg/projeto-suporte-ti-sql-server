@@ -76,7 +76,45 @@ Durante o projeto foram desenvolvidas consultas para:
 
 ## 📸 Demonstração
 
-Os exemplos das consultas e seus resultados estão disponíveis nas imagens do projeto.
+### 1. Estrutura do banco de dados
+
+Banco `ProjetoSuporteTI` com as tabelas `usuarios` e `chamados`.
+
+![Estrutura do banco de dados](imagens/01-database-criada.png)
+
+### 2. Relacionamento entre chamados e usuários
+
+Consulta utilizando `INNER JOIN` para relacionar os chamados aos usuários e seus respectivos departamentos.
+
+![INNER JOIN entre chamados e usuários](imagens/02-inner-join-chamados-usuarios.png)
+
+### 3. Quantidade de chamados por departamento
+
+Consulta utilizando `COUNT()`, `GROUP BY` e `ORDER BY` para identificar a quantidade de chamados registrada por departamento.
+
+![Quantidade de chamados por departamento](imagens/03-chamados-por-departamento.png)
+
+### 4. Chamados por prioridade e status
+
+Agrupamento dos chamados por prioridade e status para facilitar a análise da fila de atendimento.
+
+![Chamados por prioridade e status](imagens/04-chamados-por-prioridade-status.png)
+
+### 5. Chamados de alta prioridade em aberto
+
+Consulta utilizando filtros com `WHERE` e `AND`, juntamente com `INNER JOIN`, para localizar chamados de prioridade alta que permanecem em aberto.
+
+![Chamados de alta prioridade em aberto](imagens/05-chamados-alta-abertos.png)
+
+### 6. Atualização de chamado com transação
+
+Antes da atualização, o chamado encontra-se com status `Aberto` e sem data de fechamento.
+
+![Chamado antes da atualização](imagens/06a-antes-update.png)
+
+Após o `UPDATE`, o chamado passa para o status `Fechado` e recebe a data de fechamento. A alteração é confirmada utilizando `COMMIT`.
+
+![Chamado depois da atualização](imagens/06b-depois-update.png)
 
 ## 💡 Aprendizados
 
